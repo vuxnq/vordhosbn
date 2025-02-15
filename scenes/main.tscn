@@ -7,5 +7,13 @@
 script = ExtResource("1_dfrmo")
 
 [node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(105, 107)
+position = Vector2(111, 106)
 texture = ExtResource("2_o5sov")
+
+[node name="Button" type="Button" parent="Icon"]
+offset_left = 4.0
+offset_top = -17.0
+offset_right = 36.0
+offset_bottom = 13.0
+
+[connection signal="pressed" from="Icon/Button" to="." method="_on_button_pressed"]
