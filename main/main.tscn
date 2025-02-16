@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://duqsnj1qcjwky"]
+[gd_scene load_steps=6 format=3 uid="uid://duqsnj1qcjwky"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_m41hj"]
+[ext_resource type="Script" path="res://main/main.gd" id="1_m41hj"]
 [ext_resource type="Script" path="res://pets/window.gd" id="2_khb4k"]
 [ext_resource type="PackedScene" uid="uid://clgfbffsuw185" path="res://pets/bird/bird.tscn" id="3_fot3d"]
+[ext_resource type="Texture2D" uid="uid://bg8kn0yxawbp2" path="res://main/pou.jpg" id="5_27c50"]
 [ext_resource type="PackedScene" uid="uid://blxpq731ppiwt" path="res://pets/camel/camel.tscn" id="5_o0ccv"]
 
 [node name="Main" type="Node"]
@@ -36,14 +37,27 @@ camera = NodePath("Camel/CamelCamera")
 
 [node name="CamelCamera" type="Camera2D" parent="CamelWindow/Camel"]
 
-[node name="Label" type="Label" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 1
-text = "HELOOO"
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("5_27c50")
+expand_mode = 3
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -29.0
+offset_right = 48.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "quit"
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
