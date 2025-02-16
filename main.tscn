@@ -2,18 +2,19 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_m41hj"]
 [ext_resource type="Script" path="res://window.gd" id="3_58vrs"]
-[ext_resource type="PackedScene" uid="uid://clgfbffsuw185" path="res://character.tscn" id="3_fot3d"]
+[ext_resource type="PackedScene" uid="uid://clgfbffsuw185" path="res://bird.tscn" id="3_fot3d"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_m41hj")
-main_camera = NodePath("Character/Camera2D2")
+main_camera = NodePath("Bird/Camera2D2")
 
-[node name="Character" parent="." instance=ExtResource("3_fot3d")]
+[node name="Bird" parent="." instance=ExtResource("3_fot3d")]
 
-[node name="Camera2D2" type="Camera2D" parent="Character"]
+[node name="Camera2D2" type="Camera2D" parent="Bird"]
 
 [node name="Window" type="Window" parent="."]
 position = Vector2i(0, 36)
+visible = false
 script = ExtResource("3_58vrs")
 
 [node name="Camera2D" type="Camera2D" parent="Window"]

@@ -6,7 +6,7 @@ extends Node
 @onready var MainWindow : Window = get_window()
 @onready var SubWindow : Window = $Window
 
-@export var character_size: Vector2i = Vector2i(32, 32)
+@export var character_size: Vector2i = Vector2i(128, 128)
 
 @export_range(0, 19) var world_visibility_layer: int = 0
 @export_range(0, 19) var character_visibility_layer: int = 1

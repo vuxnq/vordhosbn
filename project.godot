@@ -28,10 +28,6 @@ window/subwindows/embed_subwindows=false
 window/per_pixel_transparency/allowed=true
 window/vsync/vsync_mode=0
 
-[gui]
-
-theme/per_pixel_transparency/allowed=false
-
 [layer_names]
 
 2d_render/layer_1="World"
@@ -41,3 +37,4 @@ theme/per_pixel_transparency/allowed=false
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+viewport/transparent_background=true
