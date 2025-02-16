@@ -11,29 +11,33 @@ config_version=5
 [application]
 
 config/name="vordhosbn"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 run/max_fps=60
 run/low_processor_mode=true
-boot_splash/bg_color=Color(0, 0, 0, 0)
-boot_splash/show_image=false
-boot_splash/use_filter=false
-config/icon="res://assets/icon.svg"
+config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=600
-window/size/viewport_height=400
 window/size/resizable=false
 window/size/borderless=true
 window/size/always_on_top=true
 window/size/transparent=true
 window/energy_saving/keep_screen_on=false
+window/subwindows/embed_subwindows=false
 window/per_pixel_transparency/allowed=true
 window/vsync/vsync_mode=0
+
+[gui]
+
+theme/per_pixel_transparency/allowed=false
+
+[layer_names]
+
+2d_render/layer_1="World"
+2d_render/layer_2="Character"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-viewport/transparent_background=true
